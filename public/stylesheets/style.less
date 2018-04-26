@@ -1,0 +1,126 @@
+@import "base.less";
+@import "common.less";
+
+body {
+  color: #333;
+  font-size: 14px;
+}
+
+.container {
+  padding: 20px 20px 0;
+}
+
+.flex {
+  display: flex;
+}
+.flex-item-2 {
+  width: 20%;
+  overflow: hidden;
+}
+.flex-item-4 {
+  width: 40%;
+  overflow: hidden;
+}
+.flex-item-6 {
+  width: 60%;
+  overflow: hidden;
+}
+.flex-item-8 {
+  width: 80%;
+  overflow: hidden;
+}
+
+.container.flex {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.thumbnail {
+  width: 150px;
+  height: 300px;
+  // border: 1px solid #dcdcdc;
+  margin: 0 10px 10px 0;
+}
+.thumbnail .img-cntr {
+  display: block;
+  overflow: hidden;
+  border: 1px solid #dcdcdc;
+  width: 100%;
+  height: 220px;
+  margin-bottom: 10px;
+}
+.thumbnail .img-cntr img {
+  max-width: 100%;
+  // max-height: 100%;
+}
+.thumbnail .caption {
+  text-align: center;
+}
+.thumbnail .caption h3 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
+/* 电影详情页 */
+.movie-preview {
+  img {
+    width: 100%;
+  }
+}
+.movie-info {
+  padding: 0 0 0 20px;
+  .list.flex {
+    flex-wrap: wrap;
+  }
+  .list.flex dt, .list.flex dd {
+    margin-bottom: 6px;
+  }
+  .list.flex dt {
+    width: 20%;
+  }
+  .list.flex dd {
+    width: 80%;
+  }
+}
+
+/* 后台管理：电影列表页 */
+.view-movie-list {
+  table {
+    border-collapse:collapse;
+    border: 1px solid #dcdcdc;
+    background: transparent;
+  }
+  tr {
+    border: 1px solid #dcdcdc;
+  }
+  td, th {
+    padding: 6px 8px;
+    border: 1px solid #dcdcdc;
+  }
+}
+
+/* 后台管理：添加电影页 */
+.view-movie-add {
+  input[type="text"] {
+    text-indent: 10px;
+    border-bottom: 1px solid #dcdcdc;
+  }
+  textarea {
+    padding: 10px;
+    border-color: #dcdcdc;
+  }
+  form .flex.row {
+    margin: 0 0 15px;
+  }
+  form .btn {
+    cursor: pointer;
+    text-align: center;
+    margin-right: 30px;
+    width: 80px;
+    height: 24px;
+    line-height: 24px;
+    border: 1px solid #dcdcdc;
+    border-radius: 12px;
+  }
+}

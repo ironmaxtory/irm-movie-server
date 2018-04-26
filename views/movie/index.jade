@@ -1,0 +1,22 @@
+extends ../layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  
+  div.container.flex
+    if movies.length > 0
+      each item in movies
+        div.thumbnail
+          a.img-cntr(href="/movie/detail/#{item._id}")
+            img(src="#{item.poster}", alt="#{item.title}")
+          div.caption
+            h3 #{item.title}
+            p: a.btn(href="/movie/detail/#{item._id}")
+              观看
+    else
+      div(style="text-align:center") 暂无数据            
+    
+  script.
+    console.log($);  
+      

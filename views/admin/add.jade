@@ -1,0 +1,37 @@
+extends ../layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+  div.view-movie-add
+    div.container
+      form(method="post", action="/admin/add", enctype="application/x-www-form-urlencoded")
+        input(type="hidden", name="_id", value="#{movie._id}")
+        div.flex.row
+          label.flex-item-2(for="title") 电影名字
+          input#title.flex-item-8(type="text", name="title", value="#{movie.title}")
+        div.flex.row
+          label.flex-item-2(for="director") 导演
+          input#director.flex-item-8(type="text", name="director", value="#{movie.director}")
+        div.flex.row
+          label.flex-item-2(for="country") 国家
+          input#country.flex-item-8(type="text", name="country", value="#{movie.country}")
+        div.flex.row
+          label.flex-item-2(for="language") 语言
+          input#language.flex-item-8(type="text", name="language", value="#{movie.language}")
+        div.flex.row
+          label.flex-item-2(for="poster") 海报地址
+          input#poster.flex-item-8(type="text", name="poster", value="#{movie.poster}")
+        div.flex.row
+          label.flex-item-2(for="flash") 片源地址
+          input#flash.flex-item-8(type="text", name="flash", value="#{movie.flash}")
+        div.flex.row
+          label.flex-item-2(for="year") 上映年份
+          input#year.flex-item-8(type="text", name="year", value="#{movie.year}")
+        div.flex.row
+          label.flex-item-2(for="summary") 电影简介
+          textarea#summary.flex-item-8(type="text", name="summary", rows="4") #{movie.summary}
+        div.flex.row
+          input#submit.btn(type="submit", value="录入")
+          input#cancel.btn(type="cancel", value="取消")

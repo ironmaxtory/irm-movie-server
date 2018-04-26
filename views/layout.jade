@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src="/jquery/dist/jquery.min.js")
+    block head
+  body
+    nav
+      ul
+        li: a(href="/movie") 客户端电影首页
+        li: a(href="/movie/detail/1") 客户端电影详情页
+        li: a(href="/admin") 服务端电影列表页
+        li: a(href="/admin/add") 服务端电影新增页
+    block content
